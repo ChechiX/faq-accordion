@@ -1,0 +1,91 @@
+@font-face {
+  font-display: swap;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/static/WorkSans-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Work Sans SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/fonts/static/WorkSans-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Work Sans Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/static/WorkSans-Bold.woff2") format("woff2");
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+}
+
+body {
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: #f8eeff;
+  padding: 0 1.5rem;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 48rem) {
+  body {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+  }
+}
+
+.faq {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 32px 56px 0 rgba(80, 0, 118, 0.1);
+  padding: 1.5rem;
+}
+.faq__header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.faq__icon {
+  width: 24px;
+  height: 24px;
+}
+.faq__title {
+  font-family: "Work Sans Bold";
+  font-size: clamp(2rem, 0.5687rem + 6.1069vw, 3.5rem);
+  line-height: 1.2;
+  color: #301534;
+}
+
+details summary {
+  list-style: none;
+}
+
+details summary::after {
+  content: url("./assets/images/icon-plus.svg");
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=styles.css.map */
