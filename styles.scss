@@ -59,8 +59,13 @@ html {
 
 body,
 h1,
-p {
+p,
+hr {
   margin: 0;
+}
+
+hr {
+  border: 1px solid $purple-100;
 }
 
 body {
@@ -83,6 +88,9 @@ body {
   border-radius: 8px;
   box-shadow: 0 32px 56px 0 rgba($color: #500076, $alpha: 0.1);
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 
   &__header {
     display: flex;
@@ -99,6 +107,28 @@ body {
     @include text-preset-1();
     color: $purple-950;
   }
+
+  &__details[open] {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__summary {
+    color: $purple-950;
+    font-family: 'Work Sans SemiBold';
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__answer {
+    color: $purple-600;
+    font-family: 'Work Sans';
+    font-size: 0.875rem;
+  }
 }
 
 details summary {
@@ -107,6 +137,12 @@ details summary {
 
 details summary::after {
   content: url('./assets/images/icon-plus.svg');
+  height: 30px;
+}
+
+details[open] summary::after {
+  content: url('./assets/images/icon-minus.svg');
+  height: 30px;
 }
 
 .attribution {

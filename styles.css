@@ -31,8 +31,13 @@ html {
 
 body,
 h1,
-p {
+p,
+hr {
   margin: 0;
+}
+
+hr {
+  border: 1px solid #f8eeff;
 }
 
 body {
@@ -56,6 +61,9 @@ body {
   border-radius: 8px;
   box-shadow: 0 32px 56px 0 rgba(80, 0, 118, 0.1);
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 .faq__header {
   display: flex;
@@ -72,6 +80,25 @@ body {
   line-height: 1.2;
   color: #301534;
 }
+.faq__details[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.faq__summary {
+  color: #301534;
+  font-family: "Work Sans SemiBold";
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+.faq__answer {
+  color: #8b6990;
+  font-family: "Work Sans";
+  font-size: 0.875rem;
+}
 
 details summary {
   list-style: none;
@@ -79,6 +106,12 @@ details summary {
 
 details summary::after {
   content: url("./assets/images/icon-plus.svg");
+  height: 30px;
+}
+
+details[open] summary::after {
+  content: url("./assets/images/icon-minus.svg");
+  height: 30px;
 }
 
 .attribution {
