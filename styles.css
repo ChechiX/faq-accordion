@@ -50,6 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 @media (min-width: 48rem) {
   body {
@@ -65,21 +66,45 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  max-width: 37.5rem;
+}
+@media (min-width: 48rem) {
+  .faq {
+    padding: 2.5rem;
+    border-radius: 16px;
+    gap: 2rem;
+  }
 }
 .faq__header {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
+@media (min-width: 48rem) {
+  .faq__header {
+    gap: 1.5rem;
+  }
+}
 .faq__icon {
   width: 24px;
   height: 24px;
+}
+@media (min-width: 48rem) {
+  .faq__icon {
+    width: 40px;
+    height: 40px;
+  }
 }
 .faq__title {
   font-family: "Work Sans Bold";
   font-size: clamp(2rem, 0.5687rem + 6.1069vw, 3.5rem);
   line-height: 1.2;
   color: #301534;
+}
+.faq__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 .faq__details[open] {
   display: flex;
@@ -98,10 +123,24 @@ body {
 .faq__summary:hover {
   color: #ad28eb;
 }
+@media (min-width: 48rem) {
+  .faq__summary {
+    font-family: "Work Sans SemiBold";
+    font-size: 1.125rem;
+    line-height: 1.2;
+  }
+}
 .faq__answer {
   color: #8b6990;
   font-family: "Work Sans";
   font-size: 0.875rem;
+}
+@media (min-width: 48rem) {
+  .faq__answer {
+    font-family: "Work Sans";
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
 
 details summary {
