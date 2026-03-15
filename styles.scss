@@ -123,6 +123,10 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
+
+    &:hover {
+      color: $violet-600;
+    }
   }
 
   &__answer {

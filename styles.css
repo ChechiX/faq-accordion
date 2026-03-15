@@ -95,6 +95,9 @@ body {
   align-items: center;
   gap: 1.5rem;
 }
+.faq__summary:hover {
+  color: #ad28eb;
+}
 .faq__answer {
   color: #8b6990;
   font-family: "Work Sans";
